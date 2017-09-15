@@ -1,0 +1,56 @@
+﻿body {
+    padding-top: 90px;
+    padding-bottom: 20px;
+    color: dimgray;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/** Overrides **/
+.board-list, .card-list, .card-details-list {
+    margin-top: 20px;
+}
+
+.card {
+    width: auto;    
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 15px;
+}
+
+.card-activity {    
+    color: dimgray;
+    font-size: 85%;
+}
+
+.comment {
+    height: 120%;
+}
+
+.card-comment, .comments {
+    width: 70%;
+}
+
+.card-comment {
+    text-align: left;
+}

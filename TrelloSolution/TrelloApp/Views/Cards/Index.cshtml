@@ -1,0 +1,31 @@
+﻿@model IEnumerable<TrelloApp.Models.Card>
+@{
+    ViewBag.Title = "Card";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cards</h2>
+<div class="alert alert-info" role="alert">
+    Select a card to add comments.
+</div>
+
+<div class="card-list">
+
+    <div class="row">
+        @foreach (var card in Model)
+        {
+            <div class="col-md-4">
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title">
+                                <a href="/Cards/Card?cardId=@card.Id">@card.Name</a>
+                            </h4>
+                            <p class="card-activity">Last updated on: @card.DateLastActivity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>        
+</div>

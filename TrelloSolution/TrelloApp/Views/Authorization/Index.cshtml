@@ -1,0 +1,16 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Authorising...";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    // At this point, the URL is assumed to have the token from Trello with format url#token=tokenValue
+    // Get the token value and post it to Authorization/Token action
+    $(document).ready(function () {
+        var token = window.location.hash.split("=")[1];
+
+        $.post('/Authorization/Token', { token: token }, function () {            
+            window.location.href = "@ViewBag.BoardsUrl";
+        });
+    });
+</script>

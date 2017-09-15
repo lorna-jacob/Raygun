@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TrelloApp.Models.Board>
+@{
+    ViewBag.Title = "Board";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your Boards</h2>
+<div class="alert alert-info" role="alert">
+    Select a board to view cards.
+</div>
+
+<div class="board-list">
+    <div class="row">
+        @foreach (var board in Model)
+        {
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            <a href="/Cards?boardId=@board.Id">@board.Name</a>
+                        </h4>
+                        <p class="card-text">@board.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
